@@ -7,7 +7,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Data
 @Table(name = "VEHICLE_TYPE")
 public class VehicleType {
 
@@ -17,7 +16,30 @@ public class VehicleType {
     private String name;
     private String desc;
 
-//    @OneToMany
-//    @JoinColumn(name = "vehicle_id")
-//    private List<Vehicle> vehicle;
+    @OneToMany (mappedBy = "vehicleType")
+    private List<Vehicle> vehicles;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
