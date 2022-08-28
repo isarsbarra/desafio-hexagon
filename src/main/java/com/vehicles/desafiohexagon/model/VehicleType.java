@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "VEHICLE_TYPE")
-public class VehicleType implements Serializable {
+public class VehicleType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
